@@ -12,18 +12,15 @@
             border: 1px solid black;
         }
     </style>
-    <script>
-        document.getElementById('usernameInput').focus();
-    </script>
 </head>
 
-<body onload="document.getElementById('usernameInput').focus()">
+<body>
     <h1>เข้าสู่ระบบ</h1>
     <form action="page.html">
         <table>
             <tr>
                 <th>Username :</th>
-                <th><input type="text" name="username" id="usernameInput" required></th>
+                <th><input type="text" name="username" id="usernameInput" required autofocus></th>
             </tr>
             <tr>
                 <th>Password :</th>
