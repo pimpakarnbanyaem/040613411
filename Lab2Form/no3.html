@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        document.getElementById('usernameInput').focus();
+    </script>
+</head>
+
+<body onload="document.getElementById('usernameInput').focus()">
+    <h1>เข้าสู่ระบบ</h1>
+    <form action="page.html">
+        <table>
+            <tr>
+                <th>Username :</th>
+                <th><input type="text" name="username" id="usernameInput" required></th>
+            </tr>
+            <tr>
+                <th>Password :</th>
+                <th><input type="password" name="password" required></th>
+            </tr>
+            <tr>
+                <td colspan="2">กรุณาพิมพ์ตามตัวเลขที่ปรากฏ : <br>1559<br>
+                    <input type="text" name="number" pattern="1559" required>
+                </td>
+            </tr>
+        </table>
+        <input type="image" src="./image/login.png" style="width: 80px; height: 80px;" alt="Submit">
+    </form>
+</body>
+
+</html>
