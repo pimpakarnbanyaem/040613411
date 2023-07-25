@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="form-echo.php">
+        <h3>ชื่อเต็ม/ย่อของสาขาวิชา</h3>
+        <input 
+        type="text" 
+        name="1e"
+        id="1e"
+        pattern="[A-Za-z]">
+
+        <h3>จำนวนเงินที่จะโอน</h3>
+        <input 
+        type="text" 
+        name="2e" 
+        id="2e"
+        pattern="[0-9]">
+
+        <h3>อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย</h3>
+        <input type="text" name="3e" id="3e">
+
+        <h3>ค่าไฟฟ้า 3 เดือนที่ผ่านมา</h3>
+        <input type="text" name="4e" id="4e">
+
+        <h3>รหัสบัตรประชาชน</h3>
+        <input 
+        type="text" 
+        name="5e" 
+        id="5e" 
+        placeholder="x-xxxx-xxxxx-xx-x" 
+        pattern="[0-9]{13}">
+
+        <h3>ความพึงพอใจของหนังสือเล่มนี้</h3>
+        <input type="radio" name="6e" id="6e" value="มากที่สุด"><label for="มากที่สุด">มากที่สุด</label>
+        <input type="radio" name="6e" id="6e" value="มาก"><label for="มาก">มาก</label>
+        <input type="radio" name="6e" id="6e" value="ปานกลาง"><label for="ปานกลาง">ปานกลาง</label>
+        <input type="radio" name="6e" id="6e" value="น้อย"><label for="น้อย">น้อย</label>
+        <input type="radio" name="6e" id="6e" value="น้อยที่สุด"><label for="น้อยที่สุด">น้อยที่สุด</label>
+
+        <h3>อาการป่วย</h3>
+        <input type="text" name="7e" id="7e">
+
+        <h3>ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่</h3>
+        <input type="radio" name="8e" id="8e" value="เคย"><label for="เคย">เคย</label>
+        <input type="radio" name="8e" id="8e" value="ไม่เคย"><label for="ไม่เคย">ไม่เคย</label>
+
+        <h3>รหัสผ่าน</h3>
+        <input type="password" name="9e" id="9e">
+
+        <h3>เวลาเริ่มเข้าเรียนและสิ้นสุดการเรียน</h3>
+        <input type="time" name="10e" id="10e">
+
+        <h3>วันเวลาที่ต้องไปพบแพทย์</h3>
+        <input type="datetime-local" name="11e" id="11e">
+
+        <br><input type="submit" value="submit">
+    </form>
+</body>
+</html>
