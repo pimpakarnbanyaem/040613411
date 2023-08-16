@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeColor(id){
+            const a = document.getElementById(id);
+            if(a.value){
+                a.style.color = "green";
+            }
+            else{
+                a.style.color = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Name: <input type="text" id="name" onblur="changeColor('name')"><br>
+    Age: <input type="text" id="pass1" onblur="changeColor('pass1')"><br>
+    Birthdate: <input type="text" id="pass2" onblur="changeColor('pass2')"><br> -->
+    Name: <input type="text" id="name" onblur="changeColor(this)"><br>
+    Age: <input type="text" id="pass1" onblur="changeColor(this)"><br>
+    Birthdate: <input type="text" id="pass2" onblur="changeColor(this)"><br>
+</body>
+</html>
