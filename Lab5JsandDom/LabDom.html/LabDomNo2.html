@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+            var get = document.getElementById("sec").value
+            if(get=="+"){
+                var addNumber = Number(document.getElementById("box1").value) + Number(document.getElementById("box2").value)
+            }
+            else if(get=="-"){
+                var addNumber = Number(document.getElementById("box1").value) - Number(document.getElementById("box2").value)
+            }
+            else if(get=="*"){
+                var addNumber = Number(document.getElementById("box1").value) * Number(document.getElementById("box2").value)
+            }
+            else if(get=="/"){
+                var addNumber = Number(document.getElementById("box1").value) / Number(document.getElementById("box2").value)
+            }
+            console.log(addNumber)
+            var b = document.getElementById("answer")
+            b.value = addNumber;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="box1">
+    <select id="sec">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+    <input type="text" id="box2"> =
+    <input type="text" id="answer">
+    <button onclick=add()>Go Go</button>
+</body>
+
+</html>
