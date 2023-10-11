@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var xmlHttp;
+        function send() {
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = showResult;
+
+            var a = document.getElementById("mango").value;
+            var b = document.getElementById("orange").value;
+            var c = document.getElementById("banana").value;
+            var url = "add.php?a=" + (a*30) + "&b=" + (b*70) + "&c=" + (c*30);
+
+            xmlHttp.open("GET", url);
+            xmlHttp.send();
+        }
+        function showResult() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                document.getElementById("result").innerHTML = xmlHttp.responseText;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <div>
+            มะม่วง กก.ละ 30 บาท ขายได้
+            <input type="number" id="mango">
+            กก.
+        </div>
+        <div>
+            ส้ม กก.ละ 70 บาท ขายได้
+            <input type="number" id="orange">
+            กก.
+        </div>
+        <div>
+            กล้วย หวีละ 30 บาท ขายได้
+            <input type="number" id="banana" onkeyup="send()">
+            หวี
+        </div>
+    </form>
+    <span id="result"></span>
+</body>
+
+</html>

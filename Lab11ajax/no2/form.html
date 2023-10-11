@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var xmlHttp;
+        function check() {
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = showResult;
+
+            var name = document.getElementById("name").value;
+            var url = "checkname.php?name=" + name;
+            xmlHttp.open("GET", url);
+            xmlHttp.send();
+        }
+        function showResult() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+                document.getElementById("result").innerHTML = xmlHttp.responseText;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="name" onkeyup="check()">
+    </form>
+    <span id="result"></span>
+</body>
+
+</html>
